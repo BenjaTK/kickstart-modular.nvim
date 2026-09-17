@@ -103,7 +103,10 @@ vim.api.nvim_create_autocmd('LspAttach', {
 --  See `:help lsp-config` for information about keys and how to configure
 ---@type table<string, vim.lsp.Config>
 local servers = {
-  -- clangd = {},
+  clangd = {},
+  cssls = {},
+  pyright = {},
+  rust_analyzer = {},
   -- gopls = {},
   -- pyright = {},
   -- tsc = {},
@@ -182,5 +185,9 @@ for name, server in pairs(servers) do
   vim.lsp.config(name, server)
   vim.lsp.enable(name)
 end
+
+vim.lsp.config('gdscript', {})
+vim.lsp.enable('gdscript')
+
 
 -- vim: ts=2 sts=2 sw=2 et
