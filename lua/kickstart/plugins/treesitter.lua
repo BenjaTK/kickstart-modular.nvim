@@ -43,6 +43,8 @@ vim.api.nvim_create_autocmd('FileType', {
 
     local installed_parsers = require('nvim-treesitter').get_installed 'parsers'
 
+    if language == "gdscript" then return end
+
     if vim.tbl_contains(installed_parsers, language) then
       -- Enable the parser if it is already installed
       treesitter_try_attach(buf, language)

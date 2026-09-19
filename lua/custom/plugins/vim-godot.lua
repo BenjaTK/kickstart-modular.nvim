@@ -16,4 +16,11 @@ vim.api.nvim_create_autocmd('LspAttach', {
   end,
 })
 
+-- Exec flags in Godot should be: --server ./godothost --remote-send "<C-\><C-N>:n {file}<CR>{line}G{col}"
+local gdproject = io.open(vim.fn.getcwd()..'/project.godot', 'r')
+if gdproject then
+    io.close(gdproject)
+    vim.fn.serverstart './godothost'
+end
+
 -- vim: ts=2 sts=2 sw=2 et

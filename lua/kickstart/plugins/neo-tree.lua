@@ -12,7 +12,7 @@ vim.keymap.set('n', '\\', '<Cmd>Neotree reveal<CR>', { desc = 'NeoTree reveal', 
 require('neo-tree').setup {
   filesystem = {
     filtered_items = {
-      hide_by_pattern = {"*.gd.uid"}
+      hide_by_pattern = {"*.gd.uid", "*.import"}
     },
     window = {
       mappings = {
