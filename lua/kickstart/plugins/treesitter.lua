@@ -25,6 +25,7 @@ local function treesitter_try_attach(buf, language)
   -- vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
   -- vim.wo.foldmethod = 'expr'
 
+  if language == "gdscript" then return end
   -- Check if treesitter indentation is available for this language, and if so enable it
   -- in case there is no indent query, the indentexpr will fallback to the vim's built in one
   local has_indent_query = vim.treesitter.query.get(language, 'indents') ~= nil
@@ -43,7 +44,6 @@ vim.api.nvim_create_autocmd('FileType', {
 
     local installed_parsers = require('nvim-treesitter').get_installed 'parsers'
 
-    if language == "gdscript" then return end
 
     if vim.tbl_contains(installed_parsers, language) then
       -- Enable the parser if it is already installed
