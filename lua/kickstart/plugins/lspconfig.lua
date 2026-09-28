@@ -107,6 +107,7 @@ local servers = {
   cssls = {},
   pyright = {},
   rust_analyzer = {},
+  bashls = {},
   -- gopls = {},
   -- pyright = {},
   -- tsc = {},
