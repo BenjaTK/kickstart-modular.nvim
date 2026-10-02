@@ -14,7 +14,8 @@
     },
     "blink.cmp": {
       "rev": "78336bc89ee5365633bcf754d93df01678b5c08f",
-      "src": "https://github.com/saghen/blink.cmp"
+      "src": "https://github.com/Saghen/blink.cmp",
+      "version": "1.0.0 - 2.0.0"
     },
     "conform.nvim": {
       "rev": "016802de402556da54c36bd7359b441266b01cdd",
@@ -138,7 +139,7 @@
     },
     "pywal16.nvim": {
       "rev": "a7da345f1a994df175fdc915f55b6408d682be19",
-      "src": "https://github.com/uZer/pywal16.nvim"
+      "src": "https://github.com/BenjaTK/pywal16.nvim"
     },
     "telescope-fzf-native.nvim": {
       "rev": "b25b749b9db64d375d782094e2b9dce53ad53a40",

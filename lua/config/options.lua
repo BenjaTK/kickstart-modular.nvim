@@ -23,6 +23,8 @@ vim.o.signcolumn = "yes"
 vim.o.conceallevel = 0
 vim.o.concealcursor = ""
 vim.o.winborder = "single"
+vim.o.autoindent = false
+vim.o.smartindent = false
 
 vim.o.foldmethod = "expr"
 vim.o.foldlevel = 99

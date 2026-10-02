@@ -9,11 +9,12 @@ vim.g.maplocalleader = " "
 
 map("n", "\\", ":Neotree reveal<CR>", "NeoTree reveal")
 
+-- Remaps
 map("n", "x", '"_x') -- No copiar a clipboard al eliminar carácteres.
+map("n", "j", "gj") -- Wrap-aware j
+map("n", "k", "gk") -- Wrap-aware k
 
 map("n", "<leader>W", ":set wrap!<CR>", "Toggle [W]rap")
-
-map("i", "<C-o>", "<C-x><C-o>", "[Co]mplete")
 
 map("n", "<leader>R", ":so %<CR>", "[R]eload Config")
 

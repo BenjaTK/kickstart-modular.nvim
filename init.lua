@@ -1,4 +1,4 @@
-		local function gh(repo) return "https://github.com/" .. repo end
+local function gh(repo) return "https://github.com/" .. repo end
 
 -- Plugins
 vim.loader.enable()
@@ -21,6 +21,7 @@ vim.pack.add {
 	{ src = gh "neovim/nvim-lspconfig" },
 	{ src = gh "mason-org/mason.nvim" },
 	{ src = gh "mfussenegger/nvim-lint" },
+	{ src = gh "Saghen/blink.cmp", version = vim.version.range("1.*") },
 	-- Misc
 	{ src = gh "folke/which-key.nvim" },
 }
@@ -37,6 +38,7 @@ require "plugins.colorizer"
 require "plugins.nvim-web-devicons"
 require "plugins.barbar"
 require "plugins.nvim-lint"
+require "plugins.blink"
 
 require "config.options"
 require "config.mappings"
