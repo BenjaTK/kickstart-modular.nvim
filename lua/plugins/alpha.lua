@@ -29,5 +29,3 @@ dashboard.section.buttons.val = {
 }
 
 require("alpha").setup(dashboard.opts)
-
-

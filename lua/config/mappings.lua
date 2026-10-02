@@ -7,26 +7,24 @@ map("", "<Space>", "<Nop>")
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-map("n", "\\", ":Neotree reveal<CR>", "NeoTree reveal")
-
 -- Remaps
 map("n", "x", '"_x') -- No copiar a clipboard al eliminar carácteres.
 map("n", "j", "gj")  -- Wrap-aware j
 map("n", "k", "gk")  -- Wrap-aware k
-
-local function format_and_trim()
-	vim.lsp.buf.format()
-	MiniTrailspace.trim()
-end
-
-map("n", "<leader>W", ":set wrap!<CR>", "Toggle [W]rap")
-map("n", "<leader>f", format_and_trim, "[F]ormat buffer")
-map("n", "<leader>R", ":so %<CR>", "[R]eload Config")
-
--- Search
-map("n", "<leader>c", ":nohlsearch<CR>", "[C]lear Search Highlights")
+map("v", ">", ">gv") -- Re-seleccionar después de indentar
+map("v", "<", "<gv")
 map("n", "n", "nzzzv", "Next Search Result (Centered)")
 map("n", "N", "Nzzzv", "Prev Search Result (Centered)")
+
+-- Toggles
+map("n", "<leader>W", ":set wrap!<CR>", "Toggle [W]rap")
+map("n", "\\", ":Neotree reveal<CR>", "NeoTree reveal")
+
+-- Formatting
+map("n", "<leader>f", function()
+	vim.lsp.buf.format()
+	MiniTrailspace.trim()
+end, "[F]ormat Buffer")
 
 -- fzf
 map("n", "<leader>S", ":lua require('fzf-lua').files()<CR>", "[S]earch in CWD")
@@ -51,4 +49,7 @@ for i = 1, 9 do
 end
 map("n", "<A-p>", ":BufferPin<CR>")
 
+-- Misc
 map("n", "<leader>?", ":WhichKey<CR>", "Show Mappings")
+map("n", "<leader>c", ":nohlsearch<CR>", "[C]lear Search Highlights")
+map("n", "<leader>R", ":so %<CR>", "[R]eload Config")
