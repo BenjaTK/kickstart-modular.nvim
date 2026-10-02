@@ -9,13 +9,13 @@ require("blink.cmp").setup {
     nerd_font_variant = 'mono',
 	},
 	keymap = {
-		[ "<C-space>" ] = { "show_and_insert" }
+		preset = "default",
+		[ "<C-space>" ] = { "show_and_insert", "show_documentation", "hide_documentation" },
+		[ "<C-j>" ] = { "select_next", "fallback" },
+		[ "<C-k>" ] = { "select_prev", "fallback" },
 	},
 	sources = { default = { "lsp", "path", "buffer" } },
 	fuzzy = {
 		implementation = "prefer_rust"
 	},
 }
-
-
-

@@ -5,3 +5,5 @@ vim.api.nvim_set_hl(0, "BlinkCmpMenuSelection", { fg = colors.background, bg = c
 vim.api.nvim_set_hl(0, "Visual", { fg = colors.background, update = true })
 vim.api.nvim_set_hl(0, "BufferInactive", { dim = true })
 vim.api.nvim_set_hl(0, "BufferInactiveMod", { dim = true })
+vim.api.nvim_set_hl(0, "BlinkCmpGhostText", { fg = colors.foreground, dim = true })
+vim.api.nvim_set_hl(0, "MiniTrailspace", { bg = "#aa1f1f" })

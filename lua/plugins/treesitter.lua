@@ -1,5 +1,5 @@
 local treesitter = require("nvim-treesitter")
-local langs = { 
+local langs = {
 	"bash",
 	"c",
 	"diff",
@@ -20,11 +20,10 @@ treesitter.setup()
 treesitter.install(langs)
 
 vim.api.nvim_create_autocmd("FileType", {
-      pattern = langs,
+	pattern = langs,
 
-      callback = function()
-        vim.treesitter.start()
-        vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
-      end,
+	callback = function()
+		vim.treesitter.start()
+		vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+	end,
 })
-

@@ -11,11 +11,16 @@ map("n", "\\", ":Neotree reveal<CR>", "NeoTree reveal")
 
 -- Remaps
 map("n", "x", '"_x') -- No copiar a clipboard al eliminar carácteres.
-map("n", "j", "gj") -- Wrap-aware j
-map("n", "k", "gk") -- Wrap-aware k
+map("n", "j", "gj")  -- Wrap-aware j
+map("n", "k", "gk")  -- Wrap-aware k
+
+local function format_and_trim()
+	vim.lsp.buf.format()
+	MiniTrailspace.trim()
+end
 
 map("n", "<leader>W", ":set wrap!<CR>", "Toggle [W]rap")
-
+map("n", "<leader>f", format_and_trim, "[F]ormat buffer")
 map("n", "<leader>R", ":so %<CR>", "[R]eload Config")
 
 -- Search
@@ -24,13 +29,13 @@ map("n", "n", "nzzzv", "Next Search Result (Centered)")
 map("n", "N", "Nzzzv", "Prev Search Result (Centered)")
 
 -- fzf
-map("n", "<leader>f", ":lua require('fzf-lua').files()<CR>", "[f]ind in CWD")
-map("n", "<leader>Fh", ":lua require('fzf-lua').files({ cwd = '~/' })<CR>", "[F]ind in [H]ome") --search home
-map("n", "<leader>Fc", ":lua require('fzf-lua').files({ cwd = '~/.config' })<CR>", "[F]ind in [C]onfig") --search .config
-map("n", "<leader>Ff", ":lua require('fzf-lua').files({ cwd = '..' })<CR>", "[F]ind Above") --search above
-map("n", "<leader>Fr", ":lua require('fzf-lua').resume()<CR>", "[R]epeat last [F]ind") --last search
-map("n", "<leader>g", ":lua require('fzf-lua').grep()<CR>", "[g]rep") --grep
-map("n", "<leader>G", ":lua require('fzf-lua').grep_cword()<CR>", "[G]rep Word") --grep word under cursor
+map("n", "<leader>S", ":lua require('fzf-lua').files()<CR>", "[S]earch in CWD")
+map("n", "<leader>sh", ":lua require('fzf-lua').files({ cwd = '~/' })<CR>", "[S]earch in [H]ome")          --search home
+map("n", "<leader>sc", ":lua require('fzf-lua').files({ cwd = '~/.config' })<CR>", "[S]earch in [C]onfig") --search .config
+map("n", "<leader>sf", ":lua require('fzf-lua').files({ cwd = '..' })<CR>", "[S]earch Above")              --search above
+map("n", "<leader>sr", ":lua require('fzf-lua').resume()<CR>", "[R]epeat last [S]earch")                   --last search
+map("n", "<leader>g", ":lua require('fzf-lua').grep()<CR>", "[g]rep")                                      --grep
+map("n", "<leader>G", ":lua require('fzf-lua').grep_cword()<CR>", "[G]rep Word")                           --grep word under cursor
 
 -- Buffers
 map("n", "<S-h>", ":bprevious<CR>", "Previous Buffer")

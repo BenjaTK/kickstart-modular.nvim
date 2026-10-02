@@ -12,8 +12,7 @@ require("neo-tree").setup {
 	default_component_configs = {
 		icon = {
 			provider = function(icon, node, state) icon.text = icon.text end,
-			default = "*"
 		}
-	}
+	},
+	filetype = { show = false }
 }
-

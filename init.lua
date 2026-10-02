@@ -21,7 +21,7 @@ vim.pack.add {
 	{ src = gh "neovim/nvim-lspconfig" },
 	{ src = gh "mason-org/mason.nvim" },
 	{ src = gh "mfussenegger/nvim-lint" },
-	{ src = gh "Saghen/blink.cmp", version = vim.version.range("1.*") },
+	{ src = gh "Saghen/blink.cmp",                version = vim.version.range("1.*") },
 	-- Misc
 	{ src = gh "folke/which-key.nvim" },
 }
