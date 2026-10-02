@@ -1,4 +1,4 @@
-local function gh(repo) return "https://github.com/" .. repo end
+		local function gh(repo) return "https://github.com/" .. repo end
 
 -- Plugins
 vim.loader.enable()
@@ -20,6 +20,7 @@ vim.pack.add {
 	{ src = gh "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
 	{ src = gh "neovim/nvim-lspconfig" },
 	{ src = gh "mason-org/mason.nvim" },
+	{ src = gh "mfussenegger/nvim-lint" },
 	-- Misc
 	{ src = gh "folke/which-key.nvim" },
 }
@@ -35,6 +36,7 @@ require "plugins.lsp"
 require "plugins.colorizer"
 require "plugins.nvim-web-devicons"
 require "plugins.barbar"
+require "plugins.nvim-lint"
 
 require "config.options"
 require "config.mappings"

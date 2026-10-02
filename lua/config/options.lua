@@ -34,3 +34,7 @@ vim.o.smartcase = true
 
 -- Completion
 vim.o.completeopt = "menuone"
+
+vim.diagnostic.config {
+	virtual_text = true
+}
