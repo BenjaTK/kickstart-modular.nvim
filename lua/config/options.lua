@@ -17,7 +17,6 @@ vim.o.shiftwidth = 2
 vim.o.wrap = false
 vim.g.have_nerd_font = true
 vim.o.showmode = false
-vim.o.colorcolumn = "50"
 vim.o.termguicolors = true
 vim.o.signcolumn = "yes"
 vim.o.conceallevel = 0
@@ -42,3 +41,5 @@ vim.o.completeopt = "menuone"
 vim.diagnostic.config {
 	virtual_text = true
 }
+
+
