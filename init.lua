@@ -7,7 +7,7 @@ vim.pack.add {
 	-- Appearance
 	{ src = gh "goolord/alpha-nvim" },
 	{ src = gh "uZer/pywal16.nvim" },
-	{ src = gh "norcalli/nvim-colorizer.lua" },
+	{ src = gh "catgoose/nvim-colorizer.lua" },
 	{ src = gh "nvim-tree/nvim-web-devicons" },
 	-- Navigation/Editing
 	{ src = gh "nvim-neo-tree/neo-tree.nvim" },
