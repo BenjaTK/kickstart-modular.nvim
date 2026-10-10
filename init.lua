@@ -24,6 +24,7 @@ vim.pack.add {
 	{ src = gh "Saghen/blink.cmp",                version = vim.version.range("1.*") },
 	-- Misc
 	{ src = gh "folke/which-key.nvim" },
+	{ src = gh "habamax/vim-godot" },
 }
 
 -- Imports
