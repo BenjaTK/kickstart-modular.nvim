@@ -1,7 +1,7 @@
-require("colorizer").setup {
-	options = {
-		parsers = {
-			css = true,
-		}
-	}
+require('colorizer').setup {
+  options = {
+    parsers = {
+      css = true,
+    },
+  },
 }

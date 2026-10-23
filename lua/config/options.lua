@@ -1,4 +1,4 @@
-vim.o.clipboard = "unnamedplus"
+vim.o.clipboard = 'unnamedplus'
 
 vim.o.ttyfast = true
 
@@ -18,28 +18,26 @@ vim.o.wrap = false
 vim.g.have_nerd_font = true
 vim.o.showmode = false
 vim.o.termguicolors = true
-vim.o.signcolumn = "yes"
+vim.o.signcolumn = 'yes'
 vim.o.conceallevel = 0
-vim.o.concealcursor = ""
-vim.o.winborder = "single"
+vim.o.concealcursor = ''
+vim.o.winborder = 'single'
 vim.o.autoindent = false
 vim.o.smartindent = false
 vim.o.breakindent = true
 vim.o.linebreak = true
 
-vim.o.foldmethod = "expr"
+vim.o.foldmethod = 'expr'
 vim.o.foldlevel = 99
-vim.o.foldexpr = "nvim_treesitter#foldexpr()"
+vim.o.foldexpr = 'nvim_treesitter#foldexpr()'
 
 -- Search
 vim.o.ignorecase = true
 vim.o.smartcase = true
 
 -- Completion
-vim.o.completeopt = "menuone"
+vim.o.completeopt = 'menuone'
 
 vim.diagnostic.config {
-	virtual_text = true
+  virtual_text = true,
 }
-
-
