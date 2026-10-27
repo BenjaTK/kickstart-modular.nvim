@@ -14,11 +14,12 @@ create('LspAttach', {
       mode = mode or 'n'
       vim.keymap.set(mode, keys, func, { buffer = event.buf, desc = 'LSP: ' .. desc })
     end
-
     -- Rename
     map('grn', vim.lsp.buf.rename, '[R]e[n]ame')
     map('gra', vim.lsp.buf.code_action, '[G]oto Code [A]ction', { 'n', 'x' })
-    map('grD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
+    map('grd', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
+    map('grr', vim.lsp.buf.references, '[G]oto [R]eferences')
+    map('grt', vim.lsp.buf.type_definition, '[G]oto [T]ype Definition')
 
     local client = vim.lsp.get_client_by_id(event.data.client_id)
     if not client then return end
